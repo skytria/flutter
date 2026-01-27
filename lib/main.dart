@@ -1,44 +1,17 @@
 import 'package:flutter/material.dart';
+import 'pages/login_page.dart
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: CounterPage(),
+      title:'LOGIN PAGE',
+      home: const LoginPage(),
     );
   }
 }
 
-class CounterPage extends StatefulWidget {
-  @override
-  _CounterPageState createState() => _CounterPageState();
-}
-
-class _CounterPageState extends State<CounterPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++; // update state
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Counter App")),
-      body: Center(
-        child: Text(
-          'Angka: $_counter',
-          style: TextStyle(fontSize: 32),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        child: Icon(Icons.add),
-      ),
-    );
-  }
-}
