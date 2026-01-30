@@ -60,7 +60,13 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - assets/
+    - assets/login/bsip.png
+    - assets/login/etos.png
+    - assets/login/googleicon.png
+    - assets/utama/resik.png
+    - assets/utama/sampah.png
+    - assets/utama/tap.png
+    - assets/utama/tempat_sampah.png
   fonts:
     - family: Poppins
       fonts:

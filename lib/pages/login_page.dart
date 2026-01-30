@@ -29,12 +29,12 @@ class _LoginPage extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    "login/bsip.png",
+                    "assets/login/bsip.png",
                     width: size.width * 0.3,
                     fit: BoxFit.cover,
                   ),
                   Image.asset(
-                    "login/etos.png",
+                    "assets/login/etos.png",
                     width: size.height * 0.075,
                     fit: BoxFit.cover,
                   ),

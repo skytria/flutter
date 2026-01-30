@@ -18,12 +18,12 @@ class Utama1 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    "login/bsip.png",
+                    "assets/login/bsip.png",
                     width: size.width * 0.3,
                     fit: BoxFit.cover,
                   ),
                   Image.asset(
-                    "login/etos.png",
+                    "assets/login/etos.png",
                     width: size.height * 0.075,
                     fit: BoxFit.cover,
                   ),
@@ -36,7 +36,7 @@ class Utama1 extends StatelessWidget {
               Center(
                 child: Container(
                   margin: EdgeInsets.only(top: size.height * 0.30),
-                  child: Image.asset('utama/resik.png'),
+                  child: Image.asset('assets/utama/resik.png'),
                 ),
               ),
               Padding(
@@ -51,7 +51,7 @@ class Utama1 extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(top: size.height * 0.130),
-                child: Image.asset('utama/tap.png'),
+                child: Image.asset('assets/utama/tap.png'),
               ),
               
               Padding(
