@@ -1,6 +1,6 @@
+import 'package:bank/pages/utama1.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -15,35 +15,42 @@ class _LoginPage extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: [
-          Padding(
-            padding: EdgeInsetsGeometry.all(80),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Image.asset(
-                  "login/bsip.png",
-                  width: 200,
-                  fit: BoxFit.cover,
-                ),
-                Image.asset(
-                  "login/etos.png",
-                  width: 100,
-                  fit: BoxFit.cover,
-                ),
-              ]
-            )
+          Container(
+            margin: EdgeInsets.only(
+              top: size.height * 0.05
+            ),
+            child: Padding(
+              padding: EdgeInsetsGeometry.all(40),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    "login/bsip.png",
+                    width: size.width * 0.3,
+                    fit: BoxFit.cover,
+                  ),
+                  Image.asset(
+                    "login/etos.png",
+                    width: size.height * 0.075,
+                    fit: BoxFit.cover,
+                  ),
+                ]
+              )
+            ),
           ),
+          
 
           Column(  
             crossAxisAlignment: CrossAxisAlignment.start,  
             children:[
               Container(
                 margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.3,
-                  left: MediaQuery.of(context).size.width * 0.2,
+                  top: size.height * 0.3,
+                  left: size.width * 0.2,
                 ),
                 child:Text(
                   "Selamat Datang",
@@ -51,7 +58,7 @@ class _LoginPage extends State<LoginPage> {
                   style: TextStyle(
                     decoration: TextDecoration.none,
                     fontFamily: 'Puppins',
-                    fontSize: MediaQuery.of(context).size.width * 0.075,
+                    fontSize: size.width * 0.075,
                     fontWeight: FontWeight.w600,
                     color: Colors.black, 
                   ),
@@ -59,8 +66,8 @@ class _LoginPage extends State<LoginPage> {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  left: MediaQuery.of(context).size.width * 0.2,
-                  right: MediaQuery.of(context).size.width * 0.3
+                  left: size.width * 0.2,
+                  right: size.width * 0.3
                 ),
                 child:Text(
                   "Masukan Data Diri Anda",
@@ -68,7 +75,7 @@ class _LoginPage extends State<LoginPage> {
                   style: TextStyle(
                     decoration: TextDecoration.none,
                     fontFamily: 'Puppins',
-                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                    fontSize: size.width * 0.04,
                     fontWeight: FontWeight.w400,
                     color: Colors.grey, 
                   ),
@@ -76,16 +83,16 @@ class _LoginPage extends State<LoginPage> {
               ),
               Container(
                 margin: EdgeInsets.only(
-                  top: MediaQuery.of(context).size.height * 0.05,
-                  left: MediaQuery.of(context).size.width * 0.2,
-                  right: MediaQuery.of(context).size.width * 0.2,
+                  top: size.height * 0.05,
+                  left: size.width * 0.2,
+                  right: size.width * 0.2,
                 ),
                 child:Column( 
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children:[ 
                     Container(
                       margin: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).size.height * 0.01
+                        bottom: size.height * 0.01
                       ),
                       child: Text(
                         "Email",
@@ -93,7 +100,7 @@ class _LoginPage extends State<LoginPage> {
                         style: TextStyle(
                           decoration: TextDecoration.none,
                           fontFamily: 'Puppins',
-                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                          fontSize: size.width * 0.03,
                           fontWeight: FontWeight.w400,
                           color: Colors.black, 
                         ),
@@ -110,10 +117,10 @@ class _LoginPage extends State<LoginPage> {
                         )
                       ),
                     ),
-                    const SizedBox(height: 25),
+                    const SizedBox(height: 10),
                     Container(
                       margin: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).size.height * 0.01
+                        bottom: size.height * 0.01
                       ),
                       child: Text(
                         "Password",
@@ -121,7 +128,7 @@ class _LoginPage extends State<LoginPage> {
                         style: TextStyle(
                           decoration: TextDecoration.none,
                           fontFamily: 'Puppins',
-                          fontSize: MediaQuery.of(context).size.width * 0.03,
+                          fontSize: size.width * 0.03,
                           fontWeight: FontWeight.w400,
                           color: Colors.black, 
                         ),
@@ -139,35 +146,12 @@ class _LoginPage extends State<LoginPage> {
                         )
                       ),
                     ),
-                    const SizedBox(height: 25),
+                    const SizedBox(height: 10),
 
+                    
                     Container(
                       margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.0
-                      ),
-                      child: Align(
-                        alignment: Alignment.center,
-                        child: RichText(
-                          text: TextSpan(
-                            text: "Tidak punya akun?",
-                            style: TextStyle(
-                              decoration: TextDecoration.none,
-                              fontFamily: 'Puppins',
-                              fontSize: MediaQuery.of(context).size.width * 0.02,
-                              fontWeight: FontWeight.w400,
-                              color: Colors.black, 
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                print('Daftar diklik');
-                              },
-                          ),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.03
+                        top: size.height * 0.03
                       ),
                       child: InkWell(
                         onTap: () {
@@ -179,10 +163,16 @@ class _LoginPage extends State<LoginPage> {
 
                           emailController.clear();
                           passwordController.clear();
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                            builder: (context)=> const Utama1()
+                            ),
+                          );
                         },
                         borderRadius: BorderRadius.circular(16),
                         child: Container(
-                          height: 60,
+                          height: 50,
                           width: double.infinity,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
@@ -202,7 +192,7 @@ class _LoginPage extends State<LoginPage> {
                     ),
                     Container(
                       margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.01
+                        top: size.height * 0.01
                       ),
                       height: 50,
                       width: double.infinity,
@@ -228,40 +218,28 @@ class _LoginPage extends State<LoginPage> {
                     ),
                     Container(
                       margin: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height * 0.01
+                        top: size.height * 0.01
                       ),
                       child: Align(
                         alignment: Alignment.center,
                         child: RichText(
                           text: TextSpan(
-                            text: "Tidak punya akun?",
+                            text: "Lupa Password?",
                             style: TextStyle(
                               decoration: TextDecoration.none,
                               fontFamily: 'Puppins',
-                              fontSize: MediaQuery.of(context).size.width * 0.02,
+                              fontSize: size.width * 0.02,
                               fontWeight: FontWeight.w400,
                               color: Colors.black, 
                             ),
-                            children: [
-                              TextSpan(
-                                text: 'Daftar gratis sekarang!!!',
-                                style: TextStyle(
-                                  decoration: TextDecoration.none,
-                                  fontFamily: 'Puppins',
-                                  fontSize: MediaQuery.of(context).size.width * 0.02,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.black, 
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    print('Daftar diklik');
-                                  },
-                              ),
-                            ]
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                print('Lupa Password');
+                              },
                           ),
                         ),
                       ),
-                    )
+                    ),
                   ]
                 ),
               )
