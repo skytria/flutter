@@ -1,9 +1,14 @@
-
+import 'package:bank/pages/home_page.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'pages/login_page.dart';
 import 'pages/utama1.dart';
 void main() {
   runApp(
-    const MyApp()
+    DevicePreview(
+      enabled: true,
+      builder: (contex)=>const MyApp()
+    ),
   );
 }
 
@@ -18,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Utama1(),
+      home: Utama1(),
     );
   }
 }

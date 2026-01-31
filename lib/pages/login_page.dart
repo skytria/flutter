@@ -1,4 +1,4 @@
-import 'package:bank/pages/utama1.dart';
+import 'package:bank/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
@@ -166,7 +166,7 @@ class _LoginPage extends State<LoginPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                            builder: (context)=> const Utama1()
+                            builder: (context)=> const HomePage()
                             ),
                           );
                         },

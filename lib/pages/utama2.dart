@@ -51,11 +51,11 @@ class Utama2 extends StatelessWidget {
               ),
               Container(
                 margin: EdgeInsets.only(top: size.height * 0.130),
-                child: Image.asset('assets/utama/tap.png'),
+                child: Image.asset('assets/utama/tap2.png'),
               ),
               
               Padding(
-                padding: EdgeInsetsGeometry.all(30),
+                padding: EdgeInsetsGeometry.all(50),
                 child: Container(
                   margin: EdgeInsets.only(top: size.height * 0.02),
                   child: InkWell(

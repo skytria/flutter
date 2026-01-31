@@ -65,8 +65,10 @@ flutter:
     - assets/login/googleicon.png
     - assets/utama/resik.png
     - assets/utama/sampah.png
-    - assets/utama/tap.png
     - assets/utama/tempat_sampah.png
+    - assets/utama/tap1.png
+    - assets/utama/tap2.png
+    - assets/utama/tap3.png
   fonts:
     - family: Poppins
       fonts:

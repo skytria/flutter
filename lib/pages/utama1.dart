@@ -2,7 +2,7 @@ import 'package:bank/pages/utama2.dart';
 import 'package:flutter/material.dart';
 
 class Utama1 extends StatelessWidget {
-  const Utama1({super.key});
+  const Utama1 ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,18 +44,18 @@ class Utama1 extends StatelessWidget {
                 child: Container(
                   margin: EdgeInsets.only(top: size.height * 0.02),
                   child: Text(
-                    "Resik mengubah sampah menjadi berguna",
+                    "Resik One Solution For Recycle and For Life Much Better",
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(top: size.height * 0.130),
-                child: Image.asset('assets/utama/tap.png'),
+                child: Image.asset('assets/utama/tap1.png'),
               ),
               
               Padding(
-                padding: EdgeInsetsGeometry.all(30),
+                padding: EdgeInsetsGeometry.all(50),
                 child: Container(
                   margin: EdgeInsets.only(top: size.height * 0.02),
                   child: InkWell(
